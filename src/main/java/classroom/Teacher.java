@@ -2,7 +2,7 @@ package classroom;
 
 import java.util.Arrays;
 
-public class Teacher {
+public class Teacher implements Staff{
     private String firstName;
     private String surName;
     private int gender;
@@ -77,5 +77,10 @@ public class Teacher {
             } else return false; // unable to change subject
         }
         return false;
+    }
+
+    @Override
+    public void markGrade() {
+        System.out.println("Grade is marked by " + getFirstName());
     }
 }
